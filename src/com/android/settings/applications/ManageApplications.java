@@ -322,6 +322,12 @@ public class ManageApplications extends Fragment implements
             }
         }
 
+        public void release() {
+            if (mApplications != null) {
+                mApplications.release();
+            }
+        }
+
         void updateStorageUsage() {
             // Make sure a callback didn't come at an inopportune time.
             if (mOwner.getActivity() == null) return;
@@ -592,6 +598,10 @@ public class ManageApplications extends Fragment implements
                 mResumed = false;
                 mSession.pause();
             }
+        }
+
+        public void release() {
+            mSession.release();
         }
 
         public void rebuild(int sort) {
@@ -912,7 +922,7 @@ public class ManageApplications extends Fragment implements
         mViewPager.setAdapter(adapter);
         mViewPager.setOnPageChangeListener(adapter);
         PagerTabStrip tabs = (PagerTabStrip) rootView.findViewById(R.id.tabs);
-        tabs.setTabIndicatorColorResource(android.R.color.holo_blue_light);
+        tabs.setTabIndicatorColorResource(R.color.tab_selector);
 
         // We have to do this now because PreferenceFrameLayout looks at it
         // only when the view is added.
@@ -991,6 +1001,7 @@ public class ManageApplications extends Fragment implements
         // are no longer attached to their view hierarchy.
         for (int i=0; i<mTabs.size(); i++) {
             mTabs.get(i).detachView();
+            mTabs.get(i).release();
         }
     }
 

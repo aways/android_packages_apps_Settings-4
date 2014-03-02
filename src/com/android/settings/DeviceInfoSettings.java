@@ -71,7 +71,6 @@ public class DeviceInfoSettings extends RestrictedSettingsFragment {
     static final int TAPS_TO_BE_A_DEVELOPER = 7;
 
     long[] mHits = new long[3];
-    long[] mTaps = new long[3];
     int mDevHitCountdown;
     Toast mDevHitToast;
 
@@ -181,7 +180,6 @@ public class DeviceInfoSettings extends RestrictedSettingsFragment {
 
     @Override
     public boolean onPreferenceTreeClick(PreferenceScreen preferenceScreen, Preference preference) {
-Log.i("EASTER",preference.getKey().toString());
         if (preference.getKey().equals(KEY_FIRMWARE_VERSION)) {
             System.arraycopy(mHits, 1, mHits, 0, mHits.length-1);
             mHits[mHits.length-1] = SystemClock.uptimeMillis();
@@ -196,9 +194,9 @@ Log.i("EASTER",preference.getKey().toString());
                 }
             }
         } else if (preference.getKey().equals(KEY_PA_VERSION)) {
-            System.arraycopy(mTaps, 1, mTaps, 0, mTaps.length-1);
-            mTaps[mTaps.length-1] = SystemClock.uptimeMillis();
-            if (mTaps[0] >= (SystemClock.uptimeMillis()-500)) {
+            System.arraycopy(mHits, 1, mHits, 0, mHits.length-1);
+            mHits[mHits.length-1] = SystemClock.uptimeMillis();
+            if (mHits[0] >= (SystemClock.uptimeMillis()-500)) {
                 Intent intent = new Intent(Intent.ACTION_MAIN);
                 intent.setClassName("android",
                         com.android.internal.app.PAWorldActivity.class.getName());
