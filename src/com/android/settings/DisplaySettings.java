@@ -99,8 +99,6 @@ public class DisplaySettings extends SettingsPreferenceFragment implements
 
         Resources res = getResources();
 
-        Resources res = getResources();
-
         mAccelerometer = (CheckBoxPreference) findPreference(KEY_ACCELEROMETER);
         mAccelerometer.setPersistent(false);
         if (!RotationPolicy.isRotationSupported(getActivity())
