@@ -1673,10 +1673,10 @@
                 android:excludeFromRecents="true"
                 android:theme="@*android:style/Theme.Holo.Dialog.Alert" />
 
-        <activity android:name=".chameleonos.labs.gestureanywhere.GestureAnywhereBuilderActivity" />
-        <activity android:name=".chameleonos.labs.gestureanywhere.GestureAnywhereCreateGestureActivity" />
+        <activity android:name="org.aospal.remixsettings.fragments.labs.gestureanywhere.GestureAnywhereBuilderActivity" />
+        <activity android:name="org.aospal.remixsettings.fragments.labs.gestureanywhere.GestureAnywhereCreateGestureActivity" />
 
-	<activity android:name=".AOSPAL.RamBar" />
+	<activity android:name="org.aospal.remixsettings.fragments.RamBar" />
 
    	<!-- Pseudo-activity used to provide an intent-filter entry point to ass display rotation config -->
         <activity android:name="Settings$ASSRamBarActivity"
@@ -1686,7 +1686,7 @@
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
             <meta-data android:name="com.android.settings.FRAGMENT_CLASS"
-                android:value="com.android.settings.AOSPAL.RamBar" />
+                android:value="org.aospal.remixsettings.fragments.RamBar" />
         </activity>
 
         <!-- Pseudo-activity used to provide an intent-filter entry point to encryption settings -->
@@ -1815,7 +1815,7 @@
 
         <!-- Telo -->
 
-        <activity android:name=".AOSPAL.teloradio.TeloRadioSettings"
+        <activity android:name="org.aospal.remixsettings.fragments.teloradio.TeloRadioSettings"
             android:label="@string/telo_radio_settings_title"
             android:launchMode="singleTask"
             android:process="com.android.phone">
@@ -1826,18 +1826,18 @@
             </intent-filter>
         </activity>
 
-        <receiver android:name=".AOSPAL.teloradio.TeloRadioBoot">
+        <receiver android:name="org.aospal.remixsettings.fragments.teloradio.TeloRadioBoot">
             <intent-filter>
                 <action android:name="android.intent.action.BOOT_COMPLETED" />
                 <category android:name="android.intent.category.HOME" />
             </intent-filter>
         </receiver>
 
-        <activity android:name="com.android.settings.AOSPAL.RemixSettings"/>
+        <activity android:name="org.aospal.remixsettings.RemixSettings"/>
 
-        <activity android:name=".cyanogenmod.LockscreenTargets" />
+        <activity android:name="org.aospal.remixsettings.fragments.LockscreenTargets" />
 
-        <activity android:name=".cyanogenmod.LockscreenInterface" />
+        <activity android:name="org.aospal.remixsettings.fragments.LockscreenInterface" />
 
         <!-- Telo - FIN -->
 

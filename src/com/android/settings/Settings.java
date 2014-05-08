@@ -66,11 +66,9 @@ import com.android.settings.accessibility.ToggleCaptioningPreferenceFragment;
 import com.android.settings.accounts.AccountSyncSettings;
 import com.android.settings.accounts.AuthenticatorHelper;
 import com.android.settings.accounts.ManageAccountsSettings;
-import com.android.settings.AOSPAL.RemixSettings;
 import com.android.settings.applications.AppOpsSummary;
 import com.android.settings.applications.ManageApplications;
 import com.android.settings.applications.ProcessStatsUi;
-import com.android.settings.blacklist.BlacklistSettings;
 import com.android.settings.bluetooth.BluetoothEnabler;
 import com.android.settings.bluetooth.BluetoothSettings;
 import com.android.settings.deviceinfo.Memory;
@@ -101,6 +99,9 @@ import java.util.Collections;
 import java.util.Comparator;
 import java.util.HashMap;
 import java.util.List;
+
+import org.aospal.remixsettings.RemixSettings;
+import org.aospal.remixsettings.fragments.blacklist.BlacklistSettings;
 
 /**
  * Top-level settings activity to handle single pane and double pane UI layout.
