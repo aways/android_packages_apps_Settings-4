@@ -100,9 +100,6 @@ import java.util.Comparator;
 import java.util.HashMap;
 import java.util.List;
 
-import org.aospal.remixsettings.RemixSettings;
-import org.aospal.remixsettings.fragments.blacklist.BlacklistSettings;
-
 /**
  * Top-level settings activity to handle single pane and double pane UI layout.
  */
@@ -356,9 +353,7 @@ public class Settings extends PreferenceActivity
         KeyboardLayoutPickerFragment.class.getName(),
         ApnSettings.class.getName(),
         HomeSettings.class.getName(),
-        RemixSettings.class.getName(),
-        AppOpsSummary.class.getName(),
-        BlacklistSettings.class.getName()
+        AppOpsSummary.class.getName()
     };
 
     @Override
@@ -513,7 +508,6 @@ public class Settings extends PreferenceActivity
         // uiOptions for fragments also defined as activities in manifest.
         if (WifiSettings.class.getName().equals(fragmentName) ||
                 WifiP2pSettings.class.getName().equals(fragmentName) ||
-                BlacklistSettings.class.getName().equals(fragmentName) ||
                 BluetoothSettings.class.getName().equals(fragmentName) ||
                 DreamSettings.class.getName().equals(fragmentName) ||
                 LocationSettings.class.getName().equals(fragmentName) ||
