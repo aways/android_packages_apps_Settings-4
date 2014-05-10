@@ -130,7 +130,7 @@
         android:id="@+id/interface_settings"
         android:title="@string/remix_settings_title"
         android:icon="@drawable/ic_settings_system"
-        android:fragment="com.android.settings.AOSPAL.RemixSettings" />
+        android:fragment="org.aospal.remixsettings.RemixSettings" />
 
 
     <!-- PERSONAL -->
