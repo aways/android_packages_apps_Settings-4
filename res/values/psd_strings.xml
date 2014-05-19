@@ -52,6 +52,9 @@
     <string name="remix_settings_notification_drawer">Notification Drawer</string>
     <string name="remix_settings_bugreport">Bug Report</string>
 
+    <!-- SaberDroidOTA -->
+    <string name="saberdroidota_title">SaberDroidOTA</string>
+
     <!-- Remix Settings - Summaries -->
     <string name="navigation_ring_summary">Set custom navigation bar targets besides than Google Now</string>
     <string name="qs_pulldown_summary">Allows to use the left or right side of the status bar to open the QuickSettings</string>

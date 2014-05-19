@@ -4,6 +4,17 @@
     xmlns:settings="http://schemas.android.com/apk/res/com.android.settings"
     android:key="system_settings">
 
+    <!-- SaberDroidOTA -->
+    <PreferenceScreen
+        android:id="@+id/saberdroid_ota"
+        android:icon="@drawable/ic_saberdroid_ota"
+        android:title="@string/saberdroidota_title" >
+        <intent
+        android:action="android.intent.action.MAIN"
+        android:targetPackage="com.paranoid.paranoidota"
+        android:targetClass="com.paranoid.paranoidota.MainActivity" />
+    </PreferenceScreen>
+
     <!-- TeloRadio -->
     <PreferenceScreen
         android:key="telo_radio_settings"
